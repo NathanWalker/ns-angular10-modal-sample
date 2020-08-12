@@ -12,9 +12,11 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "scripts": {
-    "clean": "npx rimraf hooks node_modules package-lock.json platforms",
+    "clean": "npx rimraf hooks node_modules package-lock.json platforms webpack.config.js",
     "ngcc": "ngcc --properties es2015 module main --first-only",
-    "postinstall": "npm run ngcc"
+    "postinstall": "npm run ngcc",
+    "ios": "nsc debug ios --emulator --no-hmr",
+    "android": "nsc debug android --emulator --no-hmr"
   },
   "dependencies": {
     "@angular/animations": "~10.0.0",
